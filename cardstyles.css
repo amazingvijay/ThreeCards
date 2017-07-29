@@ -1,0 +1,72 @@
+.viewport {
+    width:  450px;
+    height: 225px;
+    position: relative;
+    margin: 0 auto 40px;
+    border: 1px solid #CCC;
+    perspective: 800px;
+}
+
+.Titles {
+    position: absolute;
+    top: 8px ;
+    width:  450px;
+    color: blue;
+    font-size: 1.4em ;
+    text-align: center ;
+}
+
+.card {
+    position: fixed;
+    top: 40px;
+    width: 92px;
+    height: 142px;
+ 
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    transition: transform 1s ;
+      transform-style: preserve-3d;
+      transform-origin: right center;
+}
+
+.instructions {
+    position: absolute;
+    top: 200px;
+    width:  450px;
+    text-align: center ;
+}
+
+#card1 {
+    position: absolute;
+    right: 325px;
+}
+
+#card2 {
+    position: absolute;
+    right: 175px;
+}
+
+#card3 {
+    position: absolute;
+    right: 25px;
+}
+
+.card.flipped {
+    transform: translateX(-100%) rotateY(-180deg) ;
+}
+
+.card .backView {
+    transform: rotateY(-180deg) ;
+}
+
+.card .frontView, .card .backView {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
